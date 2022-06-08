@@ -1,0 +1,232 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% load static %}
+{% block content %}
+
+
+<body id="page-top">
+  {% include 'navbar.html' %}
+                <div class="container-fluid">
+                    <div>
+                        <h1 style="color: var(--bs-white);background: var(--bs-primary);">Pre-Processing Details</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <!-- Start: Animation Cards -->
+                            <div class="row space-rows">
+                                <div class="col">
+                                    <div class="card cards-shadown cards-hover" data-aos="flip-left" data-aos-duration="950">
+                                        <div class="card-header" style="background: var(--bs-gray-100);"><span class="space"><a href="#"><i class="fa fa-rocket" id="download-icon-1" style="color:green;"></i></a></span>
+                                            <div class="cardheader-text">
+                                                <h4 id="heading-card-1" style="font-size: 26px;color: var(--bs-white);background: var(--bs-primary);">Details</h4>
+                                                <p id="cardheader-subtext-1" style="color: var(--bs-gray-900);margin-bottom: -6px;">Autor Name: administrator</p>
+                                                <p id="cardheader-subtext-5" style="color: var(--bs-gray-900);margin-top: 2px;padding-top: 0px;margin-bottom: -6px;">Team: Organic Performance</p>
+                                                <p id="cardheader-subtext-3" style="color: var(--bs-gray-900);margin-top: 2px;padding-top: 0px;margin-bottom: -6px;">Shareable: False</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End: Animation Cards -->
+                        </div>
+                        <div class="col">
+                            <!-- Start: Animation Cards -->
+                            <div class="row space-rows">
+                                <div class="col">
+                                    <div class="card cards-shadown cards-hover" data-aos="flip-left" data-aos-duration="950">
+                                        <div class="card-header" style="background: var(--bs-gray-100);"><span class="space"><a href="#"><i class="fa fa-rocket" id="download-icon-5" style="color:green;"></i></a></span>
+                                            <div class="cardheader-text">
+                                                <h4 id="heading-card-5" style="font-size: 26px;color: var(--bs-white);background: var(--bs-primary);">Project details</h4>
+                                                <p id="cardheader-subtext-8" style="color: var(--bs-gray-900);margin-bottom: -6px;">Project Name: bettingsidor-analysis</p>
+                                                <p id="cardheader-subtext-9" style="color: var(--bs-gray-900);margin-top: 2px;padding-top: 0px;margin-bottom: -6px;">Created: 05.11.2021</p>
+                                                <p id="cardheader-subtext-10" style="color: var(--bs-gray-900);margin-top: 2px;padding-top: 0px;margin-bottom: -6px;">Status:&nbsp; Active</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End: Animation Cards -->
+                        </div>
+                        <div class="col">
+                            <!-- Start: Animation Cards -->
+                            <div class="row space-rows">
+                                <div class="col">
+                                    <div class="card cards-shadown cards-hover" data-aos="flip-left" data-aos-duration="950">
+                                        <div class="card-header" style="background: var(--bs-gray-100);"><span class="space"><a href="#"><i class="fa fa-rocket" id="download-icon-3" style="color:green;"></i></a></span>
+                                            <div class="cardheader-text">
+                                                <h4 id="heading-card-3" style="font-size: 26px;color: var(--bs-white);background: var(--bs-primary);">Input File details</h4>
+                                                <p id="cardheader-subtext-6" style="color: var(--bs-gray-900);margin-bottom: -6px;">domain: bettingsidor.se</p>
+                                                <p id="cardheader-subtext-2" style="color: var(--bs-gray-900);margin-top: 2px;padding-top: 0px;margin-bottom: -6px;">Number of rows: 1570000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End: Animation Cards -->
+                        </div>
+                        <div class="col" style="padding-top: 20px;">
+                            <!-- Start: Animation Cards -->
+                            <div class="row space-rows">
+                                <div class="col">
+                                    <div class="card cards-shadown cards-hover" data-aos="flip-left" data-aos-duration="950">
+                                        <div class="card-header" style="background: var(--bs-gray-100);"><span class="space"><a href="#"><i class="fa fa-rocket" id="download-icon-4" style="color:green;"></i></a></span>
+                                            <div class="cardheader-text">
+                                                <h4 id="heading-card-4" style="background: var(--bs-primary);font-size: 26px;">Finalized&nbsp;</h4>
+                                                <p id="cardheader-subtext-11" style="color: var(--bs-gray-900);margin-bottom: -6px;">Number of rows: 1570000 rows</p>
+                                                <p id="cardheader-subtext-4" style="color: var(--bs-gray-900);margin-bottom: -6px;">NUmber of columns: 24 rows</p>
+                                                <p id="cardheader-subtext-14" style="color: var(--bs-gray-900);margin-bottom: -6px;">date: 01-01-2021 to 01-06-2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End: Animation Cards -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1>Final Overview</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="table-responsive table mt-2" id="dataTable-1" role="grid" aria-describedby="dataTable_info" style="margin-left: 7px;margin-right: 7px;;">
+                        <table class="table my-0" id="dataTable">
+                            <thead>
+                                <tr>
+                                    <th>host_ip</th>
+                                    <th>time_zone</th>
+                                    <th>status_code</th>
+                                    <th>size</th>
+                                    <th>referrer</th>
+                                    <th>user_agent</th>
+                                    <th>method</th>
+                                    <th>referring_page</th>
+                                    <th>protocol</th>
+                                    <th>botName</th>
+                                    <th>verification</th>
+                                    <th>hostname</th>
+                                    <th>city</th>
+                                    <th>region</th>
+                                    <th>country</th>
+                                    <th>loc</th>
+                                    <th>org</th>
+                                    <th>postal</th>
+                                    <th>timezone</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>40.77.167.17</td>
+                                    <td>2021-05-05 06:31:06</td>
+                                    <td>200</td>
+                                    <td>916</td>
+                                    <td>NaN</td>
+                                    <td>Mozilla/5.0 (compatible; bingbot/2.0; +http://...</td>
+                                    <td>GET</td>
+                                    <td>https://bettingsidor.se/sitemap_index.xml</td>
+                                    <td>HTTP/1.0</td>
+                                    <td>search.msn.com</td>
+                                    <td>True</td>
+                                    <td>msnbot-40-77-167-17.search.msn.comBoydton</td>
+                                    <td>Boydton</td>
+                                    <td>Virginia<br></td>
+                                    <td>US</td>
+                                    <td>36.6676,-78.3875</td>
+                                    <td>AS8075 Microsoft Corporation</td>
+                                    <td>23917</td>
+                                    <td>America/New_York</td>
+                                </tr>
+                                <tr>
+                                    <td>40.77.167.17</td>
+                                    <td>2021-05-05 06:31:06</td>
+                                    <td>200</td>
+                                    <td>916</td>
+                                    <td>NaN</td>
+                                    <td>Mozilla/5.0 (compatible; bingbot/2.0; +http://...</td>
+                                    <td>GET</td>
+                                    <td>https://bettingsidor.se/sitemap_index.xml</td>
+                                    <td>HTTP/1.0</td>
+                                    <td>search.msn.com</td>
+                                    <td>True</td>
+                                    <td>msnbot-40-77-167-17.search.msn.comBoydton</td>
+                                    <td>Boydton</td>
+                                    <td>Virginia<br></td>
+                                    <td>US</td>
+                                    <td>36.6676,-78.3875</td>
+                                    <td>AS8075 Microsoft Corporation</td>
+                                    <td>23917</td>
+                                    <td>America/New_York</td>
+                                </tr>
+                                <tr>
+                                    <td>40.77.167.17</td>
+                                    <td>2021-05-05 06:31:06</td>
+                                    <td>200</td>
+                                    <td>916</td>
+                                    <td>NaN</td>
+                                    <td>Mozilla/5.0 (compatible; bingbot/2.0; +http://...</td>
+                                    <td>GET</td>
+                                    <td>https://bettingsidor.se/sitemap_index.xml</td>
+                                    <td>HTTP/1.0</td>
+                                    <td>search.msn.com</td>
+                                    <td>True</td>
+                                    <td>msnbot-40-77-167-17.search.msn.comBoydton</td>
+                                    <td>Boydton</td>
+                                    <td>Virginia<br></td>
+                                    <td>US</td>
+                                    <td>36.6676,-78.3875</td>
+                                    <td>AS8075 Microsoft Corporation</td>
+                                    <td>23917</td>
+                                    <td>America/New_York</td>
+                                </tr>
+                                <tr>
+                                    <td>40.77.167.17</td>
+                                    <td>2021-05-05 06:31:06</td>
+                                    <td>200</td>
+                                    <td>916</td>
+                                    <td>NaN</td>
+                                    <td>Mozilla/5.0 (compatible; bingbot/2.0; +http://...</td>
+                                    <td>GET</td>
+                                    <td>https://bettingsidor.se/sitemap_index.xml</td>
+                                    <td>HTTP/1.0</td>
+                                    <td>search.msn.com</td>
+                                    <td>True</td>
+                                    <td>msnbot-40-77-167-17.search.msn.comBoydton</td>
+                                    <td>Boydton</td>
+                                    <td>Virginia<br></td>
+                                    <td>US</td>
+                                    <td>36.6676,-78.3875</td>
+                                    <td>AS8075 Microsoft Corporation</td>
+                                    <td>23917</td>
+                                    <td>America/New_York</td>
+                                </tr>
+
+
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td><strong>host_op</strong></td>
+                                    <td><strong>time_zone</strong></td>
+                                    <td><strong>status_code</strong></td>
+                                    <td><strong>size</strong></td>
+                                    <td><strong>referrer</strong></td>
+                                    <td><strong>user_agent</strong></td>
+                                    <td><strong>method</strong></td>
+                                    <td><strong>referring_page</strong></td>
+                                    <td><strong>protocol</strong></td>
+                                    <td><strong>botName</strong></td>
+                                    <td><strong>verification</strong></td>
+                                    <td><strong>hostname</strong></td>
+                                    <td><strong>city</strong></td>
+                                    <td><strong>region</strong></td>
+                                    <td><strong>country</strong></td>
+                                    <td><strong>loc</strong></td>
+                                    <td><strong>org</strong></td>
+                                    <td><strong>postal</strong></td>
+                                    <td><strong>timezone</strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div><a href="#"><button class="btn btn-primary bg-danger" type="button" style="margin-left: 8px;">PRE-PROCESS THE DATA</button></a>
+                </div>
+            </div>
+{% include 'footer.html' %}
+{% include 'scripts.html' %}
+</body>
+
+{% endblock %}

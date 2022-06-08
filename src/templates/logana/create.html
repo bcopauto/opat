@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'head.html' %}
+
+<body id="page-top">
+{% include 'navbar.html' %}
+                <h1 style="background: #2f4b7c;color: var(--bs-white);">Project Name &amp; details:</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="height: 600px;">
+                                    <h4 class="card-title" style="color: rgb(248,248,251);background: #2f4b7c;">Enter Title &amp; Description</h4>
+                                    <p><em>When naming your project keep it short and clean with no more than 3 descriptive words. Use only letters and (-) to separate words. (Example: bettingsidor-log-analysis) Use up to 300 words for project description. Description is mandatory and important and will be used to compare multiple similar projects and for search.</em></p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="row">
+                                                <div class="col"><input type="text" placeholder="Domain.com - 01(month) - 2021(year)" style="padding-bottom: 3px;width: 475px;"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col"><input type="text" placeholder="domain.com" style="padding-bottom: 3px;width: 475px;"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col"><textarea style="width: 475px;padding-bottom: 17px;margin-top: 6px;height: 250px;" placeholder="project description here ( =< 300 char)..."></textarea></div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="row">
+                                                <!-- Start: material-checkbox --><div class="checkbox">
+ <label>
+    <input type="checkbox" id="flexCheckDisabled" disabled >
+    <span class="checkbox-material">
+        <span class="check"></span>
+    </span> Status ( In Progress / Done - Automatically open(0) until populates project table)  
+ </label>
+</div><!-- End: material-checkbox -->
+                                            </div>
+                                            <div class="row">
+                                                <!-- Start: material-checkbox --><div class="checkbox">
+ <label>
+    <input type="checkbox">
+    <span class="checkbox-material">
+        <span class="check"></span>
+    </span> Shareable (Available to all users - If unchecked only creator will be able to see this project) 
+ </label>
+</div><!-- End: material-checkbox -->
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p>Select the owner from drop down list.(Only admin and staff members can create project.)</p>
+
+                                                    <div class="dropdown"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button">Select Owner&nbsp;</button>
+                                                        <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="col">
+                                <div class="fa-3x"></div>
+                            </div>
+                        </div>
+                        <div class="row"><button class="btn btn-primary" type="button">Save</button></div>
+                    </div>
+                </div>
+            </div>
+{% include 'footer.html' %}
+{% include 'scripts.html' %}
+</body>
+{% endblock content %}

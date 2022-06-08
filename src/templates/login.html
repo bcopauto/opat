@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% load static %}
+{% block content %}
+
+
+
+
+
+<body class="bg-gradient-primary" style="background: url({%static '/assets/img/bg.jpg'%});">
+    <div class="container">
+        <!-- Start: OcOrato - Login form -->
+        <form id="form" method="post" action="{%url 'login' %}" style="font-family:Quicksand, sans-serif;background-color:rgba(44,40,52,0.73);width:320px;padding:40px;">
+         {% csrf_token %}
+            <h1 id="head" style="color:rgb(193,166,83);">O.P.A.T apa Login</h1>
+            <div><img class="rounded img-fluid" id="image" style="width: auto;height: auto;margin-left: 31px;" src="{%static '/assets/img/logo.png' %}"></div>
+
+            <div class="form-group mb-3"><input class="form-control" type="username" name="username" id="formum" placeholder="Username">
+            {{ form.username.errors }}
+            {{ form.username.label_tag }}
+            </div>
+            <div class="form-group mb-3"><input class="form-control" name="password" type="password" id="formum2" placeholder="Password">
+            {{ form.password.errors }}
+            {{ form.password.label_tag }}
+            </div>
+            <div class="form-group mb-3"></div>
+                <button class="btn btn-light" id="butonas" style="width:100%;height:100%;margin-bottom:10px;background-color:rgb(106,176,209);" type="submit" value="login">LOGIN</button>
+                <a id="linkas" style="font-size:12px;margin:auto;margin-left:0;margin-right:0;margin-bottom:0;margin-top:0;padding-left:0;padding-right:0;color:rgb(177,151,70);" href="#">Did you forgot your password?</a>
+            <p id="app_id" class="app" style=" font-size:9px; margin-left: 17px;">ORGANIC PERFORMANCE AUTOMATION TOOL</p>
+        </form><!-- End: OcOrato - Login form -->
+   
+</body>        
+{% endblock content %}    

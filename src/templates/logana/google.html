@@ -1,0 +1,490 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+{% load static %}
+{% block content %}
+<body id="page-top">
+{%include 'navbar.html' %}
+  
+                <h1 style="color: var(--bs-gray-100);background: #2f4b7c;" title="Test">Analog - Google Bot Analysis&nbsp; &nbsp;<img src="{% static  '/assets/img/google.jpg"> &nbsp;</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body" style="font-size: 21px;"><img src="{% static  '/assets/img/google-mobile.png' %}" style="text-align: left;"><button class="btn btn-primary" type="button">MOBILE</button>
+                                        <h1 style="font-weight: bold;font-size: 55px;text-align: center;">29%</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body"><img src="{% static  '/assets/img/desktop.png' %}"><button class="btn btn-primary" type="button">DESKTOP</button>
+                                        <h1 style="font-size: 55px;font-weight: bold;text-align: center;">60%</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body"><img src="{% static  '/assets/img/image.png' %}"><button class="btn btn-primary" type="button">IMAGES</button>
+                                        <h1 style="font-size: 55px;font-weight: bold;text-align: center;">11%</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body"><img src="{% static  '/assets/img/image.png' %}"><button class="btn btn-primary" type="button">NEWS</button>
+                                        <h1 style="font-size: 55px;font-weight: bold;text-align: center;">0%</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body"><img src="{% static  '/assets/img/image.png' %}"><button class="btn btn-primary" type="button">VIDEO</button>
+                                        <h1 style="font-size: 55px;font-weight: bold;text-align: center;">0.001%</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Start: Separator with icon -->
+                    <div class="text-center icon-separator">
+                        <div></div><i class="fas fa-address-card"></i>
+                        <div></div>
+                    </div><!-- End: Separator with icon -->
+                    <div class="row">
+                        <div class="row" style="width: 1300px;">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body" style="font-size: 21px;">
+                                        <p class="card-text" style="font-size: 16px;color: rgb(89,89,89);">For the whole data-set, the proportion of hits initiated by Google Bot is 0.61%.</p><!-- Start: Donut Chart -->
+                                        <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;doughnut&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Other&quot;,&quot;BingBot&quot;,&quot;GoogleBot&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Hits&quot;,&quot;backgroundColor&quot;:[&quot;#228B22&quot;,&quot;#01386a&quot;,&quot;#F96B00&quot;],&quot;borderColor&quot;:[&quot;#ffffff&quot;,&quot;#ffffff&quot;,&quot;#ffffff&quot;],&quot;data&quot;:[&quot;1&quot;,&quot;37&quot;,&quot;62&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:true,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}}}"></canvas></div><!-- End: Donut Chart -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p class="card-text" style="font-size: 16px;color: rgb(89, 89, 89);">Google Bot Hits by Source And bot type</p><!-- Start: Donut Chart -->
+                                        <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;doughnut&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;DesktopBot&quot;,&quot;MobileBot&quot;,&quot;ImageBot&quot;,&quot;VIdeoBot&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;&quot;,&quot;backgroundColor&quot;:[&quot;#01386a&quot;,&quot;#228B22&quot;,&quot;rgba(0,0,0,0.1)&quot;,&quot;rgba(0,0,0,0.1)&quot;],&quot;borderColor&quot;:[&quot;#ffffff&quot;,&quot;#ffffff&quot;,&quot;#ffffff&quot;,&quot;#ffffff&quot;],&quot;data&quot;:[&quot;60.052&quot;,&quot;29&quot;,&quot;11&quot;,&quot;0.001&quot;]},{&quot;label&quot;:&quot;&quot;,&quot;backgroundColor&quot;:[],&quot;borderColor&quot;:[],&quot;data&quot;:[]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:true,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}}}"></canvas></div><!-- End: Donut Chart -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p class="card-text" style="font-size: 16px;color: rgb(89, 89, 89);">The proportion of hits by Google bot&nbsp; is by target</p><!-- Start: Donut Chart -->
+                                        <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;doughnut&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Page&quot;,&quot;Image&quot;,&quot;PHP&quot;,&quot;JSON&quot;,&quot;JavaScript&quot;,&quot;CSS&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;&quot;,&quot;backgroundColor&quot;:[&quot;#01386a&quot;,&quot;#228B22&quot;,&quot;rgba(0,0,0,0.1)&quot;,&quot;rgba(0,0,0,0.39)&quot;,&quot;rgba(74,61,61,0.1)&quot;,&quot;rgba(248,3,3,0.13)&quot;],&quot;borderColor&quot;:[&quot;#ffffff&quot;,&quot;#ffffff&quot;,&quot;#ffffff&quot;,&quot;#ffffff&quot;,&quot;#ffffff&quot;,&quot;#ffffff&quot;],&quot;data&quot;:[&quot;53.67&quot;,&quot;26.47&quot;,&quot;12.94&quot;,&quot;6.77&quot;,&quot;0.08&quot;,&quot;0.06&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:true,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}}}"></canvas></div><!-- End: Donut Chart -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">NOTES</h4>
+                                        <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-nt-ph" href="#collapse-nt-ph" role="button">SHOW</a>
+                                            <div class="collapse show" id="collapse-nt-ph"><input class="form-control-plaintext" type="text" value="Plain Text Value" style="height: 60px;border-radius: 1px;border-color: var(--bs-blue);"><button class="btn btn-primary" type="button">SUBMIT</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">NOTES</h4>
+                                        <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse1" href="#collapse1" role="button">SHOW</a>
+                                            <div class="collapse show" id="collapse1"><input class="form-control-plaintext" type="text" value="Plain Text Value" style="height: 60px;border-radius: 1px;border-color: var(--bs-blue);"><button class="btn btn-primary" type="button">SUBMIT</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title"><a href="#"><i class="fa fa-download" style="color: rgb(81,162,52);font-size: 24px;" title="Download"></i></a>&nbsp;Referring page</h4>
+                                        <h6 class="text-muted card-subtitle mb-2">Page Referring URL is a URL viewed just prior to another page which can be both onsite or offsite URLs.</h6>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Referring page</th>
+                                                        <th>Hits</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-truncate"><a href="https://bettingsidor.se/sitemap_index.xml" target="_blank">https://bettingsidor.se/sitemap_index.xml</a></td>
+                                                        <td>1481</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-truncate"><a href="https://bettingsidor.se/snabba-uttag/" target="_blank">https://bettingsidor.se/snabba-uttag/</a></td>
+                                                        <td>830</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-truncate"><a href="https://bettingsidor.se/" target="_blank">https://bettingsidor.se/</a><br></td>
+                                                        <td>533</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-truncate"><a href="https://bettingsidor.se/svensk-spellicens/" target="_blank">https://bettingsidor.se/svensk-spellicens/</a><br></td>
+                                                        <td>461</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-truncate"><a href="https://bettingsidor.se/wp-admin/admin-ajax.php?action=loadModal&amp;cat=null" target="_blank">https://bettingsidor.se/wp-admin/admin-ajax.php?action=loadModal&amp;cat=null</a><br></td>
+                                                        <td>456</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title"><a href="#"><i class="fa fa-download" style="color: rgb(81,162,52);font-size: 24px;"></i></a>&nbsp;Referrer</h4>
+                                        <h6 class="text-muted card-subtitle mb-2">Referring URL is the offsite URL that referred a visitor to your site in that session.&nbsp;</h6>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Referrer</th>
+                                                        <th>Hits</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-truncate"><a href="https://bettingsidor.se/odds-bonus/" target="_blank">https://bettingsidor.se/odds-bonus/</a></td>
+                                                        <td>1145</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-truncate"><a href="https://bettingsidor.se/betalningsmetoder/neteller/" target="_blank">https://bettingsidor.se/betalningsmetoder/neteller/</a></td>
+                                                        <td>1111</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-truncate"><a href="https://bettingsidor.se/betalningsmetoder/bitcoin/" target="_blank">https://bettingsidor.se/betalningsmetoder/bitcoin/</a><br></td>
+                                                        <td>1100</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-truncate"><a href="https://bettingsidor.se/betalningsmetoder/skrill/" target="_blank">https://bettingsidor.se/betalningsmetoder/skrill/</a><br></td>
+                                                        <td>1097</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-truncate"><a href="https://bettingsidor.se/betalningsmetoder/klarna/" target="_blank">https://bettingsidor.se/betalningsmetoder/klarna/</a><br></td>
+                                                        <td>1091</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body" style="<i class=&quot;fa fa-download&quot; style=&quot;color: rgb(81,162,52);font-size: 24px;&quot;></i>">
+                                        <h4 class="card-title"><a href="#"><i class="fa fa-download" style="color: rgb(81,162,52);font-size: 24px;"></i></a>&nbsp;Referrer field</h4>
+                                        <h6 class="text-muted card-subtitle mb-2">Represents the proportion of hits on URL where empty field determines direct hit.</h6>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Url</th>
+                                                        <th>proportion</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Empty</td>
+                                                        <td>55%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="https://bettingsidor.se/odds-bonus/" target="_blank">https://bettingsidor.se/odds-bonus/</a></td>
+                                                        <td>2.4%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="https://bettingsidor.se/betalningsmetoder/neteller/" target="_blank">https://bettingsidor.se/betalningsmetoder/neteller/</a><br></td>
+                                                        <td>2.3%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="https://bettingsidor.se/betalningsmetoder/bitcoin/" target="_blank">https://bettingsidor.se/betalningsmetoder/bitcoin/</a><br></td>
+                                                        <td>2.3%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="https://bettingsidor.se/betalningsmetoder/skrill/" target="_blank">https://bettingsidor.se/betalningsmetoder/skrill/</a><br></td>
+                                                        <td>2.3%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title"><a href="#"><i class="fa fa-download" style="color: rgb(81,162,52);font-size: 24px;"></i></a>&nbsp;Direct Hit break down by proportion of the URLs</h4>
+                                        <h6 class="text-muted card-subtitle mb-2">Represents the share of all URLs directly targeted by the Google bot.</h6>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>URL</th>
+                                                        <th>proportion</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="https://bettingsidor.se/sitemap_index.xml" target="_blank">https://bettingsidor.se/sitemap_index.xml</a></td>
+                                                        <td>5.7%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="https://bettingsidor.se/snabba-uttag/" target="_blank">https://bettingsidor.se/snabba-uttag/</a></td>
+                                                        <td>3.20%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="https://bettingsidor.se/" target="_blank">https://bettingsidor.se/</a><br></td>
+                                                        <td>2.04%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="https://bettingsidor.se/svensk-spellicens/" target="_blank">https://bettingsidor.se/svensk-spellicens/</a><br></td>
+                                                        <td>1.8%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="https://bettingsidor.se/utan-registrering/" target="_blank">https://bettingsidor.se/utan-registrering/</a><br></td>
+                                                        <td>1.16%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Direct Hits - Status Code</h4>
+                                        <h6 class="text-muted card-subtitle mb-2" style="color: rgb(89,89,89);">Represents response code for direct hits.</h6><!-- Start: Bar Chart -->
+                                        <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;bar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;301&quot;,&quot;304&quot;,&quot;404&quot;,&quot;200&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Status Code&quot;,&quot;backgroundColor&quot;:&quot;#228B22&quot;,&quot;borderColor&quot;:&quot;#228B22&quot;,&quot;data&quot;:[&quot;0.9&quot;,&quot;4.3&quot;,&quot;8.7&quot;,&quot;86&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:true,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:true},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;beginAtZero&quot;:true,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:true,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;beginAtZero&quot;:true,&quot;padding&quot;:20}}]}}}"></canvas></div><!-- End: Bar Chart -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Referrer Page -&nbsp;Status Code&nbsp;</h4>
+                                        <h6 class="text-muted card-subtitle mb-2">Represents response code for non direct hits.</h6>
+                                        <p class="card-text"></p><!-- Start: Bar Chart -->
+                                        <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Not Found&quot;,&quot;Forbidden&quot;,&quot;OK&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Hits&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;7&quot;,&quot;258&quot;,&quot;21147&quot;],&quot;backgroundColor&quot;:&quot;#d8dade&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div><!-- End: Bar Chart -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Direct Hit Proportion - Segmented by file type</h4>
+                                        <h6 class="text-muted card-subtitle mb-2">This section holds the information about the sample segmented by file types where bot directly hit the URL. (referring field is empty)</h6>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>File Type</th>
+                                                        <th>proportion</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><i class="fa fa-book"></i></td>
+                                                        <td>62%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>.png</td>
+                                                        <td>20%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>.jpg</td>
+                                                        <td>7.32%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>.xml</td>
+                                                        <td>6.2%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>.gif</td>
+                                                        <td>3.6%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>.txt</td>
+                                                        <td>0.71%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>.svg</td>
+                                                        <td>0.17%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>.ico</td>
+                                                        <td>0.14%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>.jpeg</td>
+                                                        <td>0.14%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>.php</td>
+                                                        <td>0.10%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>.html</td>
+                                                        <td>0.003%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Referring Page - Segmented by file type</h4>
+                                        <h6 class="text-muted card-subtitle mb-2">This section holds the information about the sample segmented by file types where&nbsp; the URL was requested via referrer. (referring field + referring page field - Non direct hits )</h6>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>File Type</th>
+                                                        <th>proportion</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>json</td>
+                                                        <td>80%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>js</td>
+                                                        <td>12%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>php</td>
+                                                        <td>4.2%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>css</td>
+                                                        <td>4%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>png</td>
+                                                        <td>0.17%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>woff</td>
+                                                        <td>0.14%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>svg</td>
+                                                        <td>0.02%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">URL inspection&nbsp; - By the size of the document</h4>
+                                        <h6 class="text-muted card-subtitle mb-2">Insert URL in the field below to get more insights and click send!</h6><input type="text" placeholder="Input URL" style="width: 600px;"><button class="btn btn-primary" type="button" style="margin-left: 3px;">SEND</button>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>referrer</th>
+                                                        <th>referring page</th>
+                                                        <th>datetime</th>
+                                                        <th>size</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>https://bettingsidor.se/slotv-casino/</td>
+                                                        <td>https://bettingsidor.se/wp-content/cache/autoptimize/css/autoptimize_66ca4559d65ca6937f8bc2daf6dfedfb.css</td>
+                                                        <td>2021-05-05 15:51:03</td>
+                                                        <td>553</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>https://bettingsidor.se/slotv-casino/</td>
+                                                        <td>https://bettingsidor.se/wp-content/cache/autoptimize/css/autoptimize_66ca4559d65ca6937f8bc2daf6dfedfb.css</td>
+                                                        <td>2021-05-05 15:51:03</td>
+                                                        <td>212822</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>https://bettingsidor.se/slotv-casino/</td>
+                                                        <td>https://bettingsidor.se/wp-content/cache/autoptimize/css/autoptimize_66ca4559d65ca6937f8bc2daf6dfedfb.css</td>
+                                                        <td>2021-05-05 15:51:03</td>
+                                                        <td>553</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>https://bettingsidor.se/slotv-casino/</td>
+                                                        <td>https://bettingsidor.se/wp-content/cache/autoptimize/css/autoptimize_66ca4559d65ca6937f8bc2daf6dfedfb.css</td>
+                                                        <td>2021-05-05 15:51:03</td>
+                                                        <td>212822</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Hits - Monthly</h4>
+                                        <h6 class="text-muted card-subtitle mb-2">Insert URL in the field below to get more insights and click send!</h6><input type="text" placeholder="June" style="width: 600px;"><button class="btn btn-primary" type="button" style="margin-left: 3px;">SEND</button>
+                                        <div class="row">
+                                            <div class="col"><img src="{% static  '/assets/img/monthly.png' %}" style="width: 550px;"></div>
+                                            <div class="col"><img src="{% static  '/assets/img/june.png' %}" style="width: 550px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Hits on Sitemap - daily</h4>
+                                        <h6 class="text-muted card-subtitle mb-2">Insert URL in the field below to get more insights and click send!</h6><input type="text" placeholder="Input URL" style="width: 600px;"><button class="btn btn-primary" type="button" style="margin-left: 3px;">SEND</button><!-- Start: Bar Chart -->
+                                        <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;bar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;2021-05-04&quot;,&quot;2021-05-05&quot;,&quot;2021-05-06&quot;,&quot;2021-05-07&quot;,&quot;2021-05-08&quot;,&quot;2021-05-09&quot;,&quot;2021-05-11&quot;,&quot;2021-05-12&quot;,&quot;2021-05-16&quot;,&quot;2021-05-17&quot;,&quot;2021-05-18&quot;,&quot;2021-05-24&quot;,&quot;2021-05-25&quot;,&quot;2021-05-28&quot;,&quot;2021-05-29&quot;,&quot;2021-05-30&quot;,&quot;2021-05-31\t&quot;,&quot;2021-06-01&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Hits&quot;,&quot;backgroundColor&quot;:&quot;#4e73df&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;,&quot;data&quot;:[&quot;93&quot;,&quot;259&quot;,&quot;189&quot;,&quot;136&quot;,&quot;217&quot;,&quot;176&quot;,&quot;118&quot;,&quot;32&quot;,&quot;77&quot;,&quot;118&quot;,&quot;44&quot;,&quot;82&quot;,&quot;131&quot;,&quot;188&quot;,&quot;296&quot;,&quot;175&quot;,&quot;134&quot;,&quot;31&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div><!-- End: Bar Chart -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    {% include 'footer.html' %}
+    {% include 'scripts.html' %}
+    </body>
+    {% endblock content %}

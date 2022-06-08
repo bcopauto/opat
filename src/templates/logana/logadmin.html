@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+{% load static %}
+{% block content %}
+<body id="page-top">
+{%include 'navbar.html' %}
+                <h1 style="background: #2f4b7c;color: var(--bs-white);">Projects:</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col">
+                                <div class="dropdown" style="text-align: center;"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button">Domain&nbsp;</button>
+                                    <div class="dropdown-menu"><a class="dropdown-item" href="#">goal.pl</a><a class="dropdown-item" href="#">vegasinsider.com</a><a class="dropdown-item" href="#">bettingsidor.se</a></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col">
+                                        <p style="font-weight: bold;">DOMAIN:</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>goal.pl</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table  class="table table-bordered"  style="font-size: 13px;">
+                                <thead>
+                                    <tr style="background-color:coral; color:white" >
+                                        <th>id</th>
+                                        <th>Project Name</th>
+                                        <th>description</th>
+                                        <th>domain</th>
+                                        <th>created</th>
+                                        <th>log start date</th>
+                                        <th>log end date</th>
+                                        <th>status</th>
+                                        <th>user id</th>
+                                        <th>shareable</th>
+                                        <th>no rows</th>
+                                        <th>no cols</th>
+                                        <th>app id</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><a href="/logana/processing-details">Goal Pl - 02 - 2021</a></td>
+                                        <td>Goal pl log files for February 2021</td>
+                                        <td>goal.pl</td>
+                                        <td>May 26, 2022, 9:49 p.m.</td>
+                                        <td>01-02-2021</td>
+                                        <td>30-02-2021</td>
+                                        <td>active</td>
+                                        <td>1</td>
+                                        <td>True</td>
+                                        <td>100200</td>
+                                        <td>17</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><a href="/logana/processing-details">Goal Pl - 03 - 2021</a></td>
+                                        <td>Goal pl log files for March 2021</td>
+                                        <td>goal.pl</td>
+                                        <td>May 27, 2022, 9:49 p.m.</td>
+                                        <td>01-03-2021</td>
+                                        <td>30-03-2021</td>
+                                        <td>active</td>
+                                        <td>1</td>
+                                        <td>True</td>
+                                        <td>450000</td>
+                                        <td>17</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% include 'footer.html' %}
+{% include 'scripts.html' %}
+</body>
+{% endblock content %}

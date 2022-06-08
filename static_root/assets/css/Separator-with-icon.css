@@ -1,0 +1,26 @@
+.icon-separator {
+  font-size: 0%;
+  margin-bottom: 50px;
+}
+
+.icon-separator div {
+  border: none;
+  border-top: .25rem solid;
+  width: 6rem;
+  display: inline-block;
+}
+
+@media (max-width: 280px) {
+  .icon-separator div {
+    width: 3rem;
+  }
+}
+
+.icon-separator i {
+  display: inline-block;
+  padding: 0 10px;
+  top: 0.3em;
+  font-size: 2rem;
+  position: relative;
+}
+

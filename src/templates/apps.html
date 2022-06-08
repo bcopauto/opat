@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body id="page-top">
+{%include 'navbar.html' %}
+                <div class="container-fluid">
+                    <div>
+                        <h1 style="color: var(--bs-white);background: var(--bs-primary);">Available Apps</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <!-- Start: Animation Cards -->
+                            <div class="row space-rows">
+                                <div class="col">
+                                    <div class="card cards-shadown cards-hover" data-aos="flip-left" data-aos-duration="950">
+                                        <div class="card-header" style="background: var(--bs-gray-100);"><span class="space"><a href="#"><i class="fa fa-rocket" id="download-icon-1" style="color:green;"></i></a></span>
+                                            <div class="cardheader-text">
+                                                <h4 id="heading-card-1" style="font-size: 26px;color: var(--bs-white);background: var(--bs-primary);">LogAna</h4>
+                                                <p id="cardheader-subtext-1" style="color: var(--bs-gray-900);">Log file analyzer</p>
+                                                <a href="/logana/projects" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">LAUNCH</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End: Animation Cards -->
+                        </div>
+                        <div class="col">
+                            <!-- Start: Animation Cards -->
+                            <div class="row space-rows">
+                                <div class="col">
+                                    <div class="card cards-shadown cards-hover" data-aos="flip-left" data-aos-duration="950">
+                                        <div class="card-header" style="background: var(--bs-gray-100);"><span class="space"><a href="#"><i class="fa fa-rocket" id="download-icon-2" style="color:green;"></i></a></span>
+                                            <div class="cardheader-text">
+                                                <h4 id="heading-card-2" style="background: var(--bs-primary);font-size: 26px;">Core Web Vitals</h4>
+                                                <p id="cardheader-subtext-2" style="color: var(--bs-gray-900);">Core Web vitals Analyzer</p><button class="btn btn-primary" type="button" disabled>LAUNCH</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End: Animation Cards -->
+                        </div>
+                        <div class="col">
+                            <!-- Start: Animation Cards -->
+                            <div class="row space-rows">
+                                <div class="col">
+                                    <div class="card cards-shadown cards-hover" data-aos="flip-left" data-aos-duration="950">
+                                        <div class="card-header" style="background: var(--bs-gray-100);"><span class="space"><a href="#"><i class="fa fa-rocket" id="download-icon-3" style="color:green;"></i></a></span>
+                                            <div class="cardheader-text">
+                                                <h4 id="heading-card-3" style="background: var(--bs-primary);font-size: 26px;">GSC Integration</h4>
+                                                <p id="cardheader-subtext-3" style="color: var(--bs-gray-900);">Google Search console&nbsp;</p><button class="btn btn-primary" type="button" disabled>LAUNCH</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End: Animation Cards -->
+                        </div>
+                        <div class="col">
+                            <!-- Start: Animation Cards -->
+                            <div class="row space-rows">
+                                <div class="col">
+                                    <div class="card cards-shadown cards-hover" data-aos="flip-left" data-aos-duration="950">
+                                        <div class="card-header" style="background: var(--bs-gray-100);"><span class="space"><a href="#"><i class="fa fa-rocket" id="download-icon-4" style="color:green;"></i></a></span>
+                                            <div class="cardheader-text">
+                                                <h4 id="heading-card-4" style="background: var(--bs-primary);font-size: 26px;">Competitor Analyzer</h4>
+                                                <p id="cardheader-subtext-4" style="color: var(--bs-gray-900);">Competitor analysis tool</p><button class="btn btn-primary" type="button" disabled>LAUNCH</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End: Animation Cards -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% include 'footer.html'%}
+    {% include 'scripts.html' %}
+</body>
+{% endblock content %}

@@ -1,0 +1,11 @@
+<ul class="navbar-nav text-light" id="accordionSidebar">
+    <li class="nav-item"><a class="nav-link active" href="/apps"><i class="fas fa-tachometer-alt"></i><span>App Dashboard</span></a></li>
+    {% if user.is_authenticated %} 
+        {% if user.is_staff %}
+    <li class="nav-item"><a class="nav-link active" href="/logana/create"><i class="fas fa-hammer" style="color: lawngreen;"></i><span>Create</span></a></li>
+    <li class="nav-item"><a class="nav-link active" href="/logana/upload"><i class="fas fa-upload" style="color: lawngreen;"></i><span>Upload</span></a></li>
+        {% endif %}
+    {% endif %}
+<li class="nav-item"><a class="nav-link" href="/logana/projects"><i class="fas fa-hammer" style="color:lawngreen;"></i><span>My Projects</span></a></li>
+    <li class="nav-item"><a class="nav-link" href="/logout"><i class="fas fa-bars" style="color:lawngreen;"></i><span>Log out</span></a></li>            
+</ul>

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/login.css" %}">
+{{ form.media }}
+{% endblock %}
+
+{% block bodyclass %}{{ block.super }} login{% endblock %}
+
+{% block usertools %}{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block nav-sidebar %}{% endblock %}
+
+{% block content_title %}{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content %}
+<body class="bg-gradient-primary" style="background: url({%static '/assets/img/bg.jpg'%});">
+{% if form.errors and not form.non_field_errors %}
+<p class="errornote">
+{% if form.errors.items|length == 1 %}{% translate "Please correct the error below." %}{% else %}{% translate "Please correct the errors below." %}{% endif %}
+</p>
+{% endif %}
+
+{% if form.non_field_errors %}
+{% for error in form.non_field_errors %}
+<p class="errornote">
+    {{ error }}
+</p>
+{% endfor %}
+{% endif %}
+
+<div id="content-main">
+
+{% if user.is_authenticated %}
+<p class="errornote">
+{% blocktranslate trimmed %}
+    You are authenticated as {{ username }}, but are not authorized to
+    access this page. Would you like to login to a different account?
+{% endblocktranslate %}
+</p>
+{% endif %}
+
+<form action="{{ app_path }}" method="post" id="form" style="font-family:Quicksand, sans-serif;background-color:rgba(44,40,52,0.73);width:320px;padding:40px;">{% csrf_token %}
+            <h1 id="head" style="color:rgb(193,166,83);">O.P.A.T apa Login</h1>
+            <div><img class="rounded img-fluid" id="image" style="width: auto;height: auto;margin-left: 31px;" src="{%static '/assets/img/logo.png' %}"></div>
+
+              <div class="form-group mb-3"><input class="form-control" type="email" id="formum" placeholder="Username">{{ form.username.errors }} {{ form.username }}</div>
+            <div class="form-group mb-3"><input class="form-control" type="password" id="formum2" placeholder="Password">    {{ form.password.errors }}
+ {{ form.password }}</div>
+            <div class="form-group mb-3"></div>
+  {% url 'admin_password_reset' as password_reset_url %}
+  {% if password_reset_url %}
+  <div class="password-reset-link">
+    <a href="{{ password_reset_url }}">{% translate 'Forgotten your password or username?' %}</a>
+  </div>
+  {% endif %}
+  <div class="submit-row">
+    <input type="submit" class="btn btn-light" id="butonas" style="width:100%;height:100%;margin-bottom:10px;background-color:rgb(106,176,209);" type="submit" value="login" value="{% translate 'Log in' %}">
+    <input type="hidden" name="next" value="{{ next }}">
+  </div>
+</form>
+
+</div>
+{% endblock %}

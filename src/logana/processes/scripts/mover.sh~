@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "cleaning"
+mv final.csv results
+echo "cleaned!"

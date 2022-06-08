@@ -1,0 +1,11 @@
+
+{% if messages %}
+<div id="a" class="alert alert-danger alert-dismissible fade show" role="alert">
+    {% for message in messages %}
+    <p>{{ message }}</p>
+    {% endfor %}
+
+</div>
+{% endif %}
+
+
